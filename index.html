@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Device Location</title>
+  </head>
+  <body>
+    <!-- <div id="app"></div> -->
+    <!-- <script type="module" src="/src/main.ts"></script> -->
+    <textarea id="alpha"></textarea>
+    <textarea id="beta"></textarea>
+    <textarea id="gamma"></textarea>
+  </body>
+  <script>
+    window.addEventListener('deviceorientation', (event) => {
+      document.getElementById('alpha').value = event.alpha;
+      document.getElementById('beta').value = event.beta;
+      document.getElementById('gamma').value = event.gamma;
+    })
+  </script>
+</html>
